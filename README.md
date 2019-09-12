@@ -7,7 +7,7 @@ Our algorithm will parse through your file, and find relevant use cases for useS
 
 Our program will modify the Abstract Syntax Tree accordingly, and generate the code for a transformed component for you to utilize at your convenience!
 
-Hookd is still in Alpha and goes to show what a small team of dedicated engineers can achieve in a few weeks!
+
 
 Hookd is also available as a Command Line Interface tool, downloadable from NPM: @reactionaries/hookd-cli
 https://www.npmjs.com/package/@reactionaries/hookd-cli
