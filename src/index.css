@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  
+}
+
+a {
+  text-decoration: none;
+  color: #21752f;
+}
+a:hover {
+  color: #02bd50;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr);
+  grid-template-areas: 
+  'header header'
+  'pre post';
+  /* 'pre post'; */
+  /* grid-template-rows:  1fr 1fr; */
+  width: 100%;
+  height: 100%;
+}
+
+#header {
+  grid-area: header;
+  padding: 10px;
+  padding-left: 40px;
+  background-color: #b4d6c2
+}
+#header h1 {
+  font-size: 40px;
+}
+#preBox {
+  /* position: relative; */
+  /* grid-row: 1; */
+  grid-area: pre;
+  background-color: rgb(245, 184, 184);
+  width: 100%;
+  height: 500px;
+  /* float: left; */
+}
+
+#postBox {
+  /* position: relative; */
+  /* grid-row: 1; */
+  grid-area: post;
+  background-color: rgb(197, 197, 253);
+  width: 100%;
+  height: 500px;
+  /* float: right; */
+}
+
+#inputField {
+ color: rgb(148, 148, 255);
+ background-color: rgb(58, 58, 58);
+ height: 100%;
+ width: 100%;
+}
+
+#outputField {
+  color: rgb(252, 185, 185);
+  background-color: rgb(58, 58, 58);
+  height: 100%;
+  width: 100%;
+ }
+
+
+#submitButton {
+  /* grid-column: 2;
+  grid-row: 2; */
+  /* float: bottom; */
+}
+
+
+
