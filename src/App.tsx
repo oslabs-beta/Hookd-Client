@@ -3,32 +3,35 @@ import './App.css';
 import PreBox from './components/PreBox';
 import PostBox from './components/PostBox';
 import Header from './components/Header';
+import Footer from './components/Footer';
+import Errorhandler from './HOC/Errorhandler';
 
-
+const hookd = require('@reactionaries/hookd');
 
 const App: React.FC = () => {
-  const [code, setCode] = useState('');
+  const [code, setCode] = useState('Your code here');
   const [transpiledCode, setTranspiledCode ] = useState('');
-  function handleClick(): any {
-    // let text = CodeMirror.getValue() as string;
-    //use hook'd logic here to set the transpiled code
-    //with the returned value with whatever we run on it with Hookd
-  }
+  const [error, setError] = useState(null);
 
-
-
-  function handleChange (newCode: any) {
-    console.log(newCode);
+  function handleChange (newCode: string) {
     setCode(newCode);
-    
+  }
+  function handleClick (): any {
+    try {
+      setTranspiledCode(hookd(code));
+    }
+    catch (error){
+      setError(error);
+    }
+    console.log(transpiledCode);
   }
   return (
-    <React.Fragment>
-      <Header />
-      <PreBox {...handleChange} />
-      <button id ="submitButton" onClick={handleClick}>Submit Code</button>
-      <PostBox transpiledCode = {transpiledCode}/>
-    </React.Fragment>
+      <React.Fragment>
+        <Header handleClick = {handleClick}/>
+        <PreBox handleChange = {handleChange} code ={code}/>
+        <PostBox transpiledCode = {transpiledCode} error = {error}/>
+        <Footer />
+      </React.Fragment>
   );
 }
 

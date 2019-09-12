@@ -1,31 +1,26 @@
-import React, {useState} from 'react';
-import { propsInterface } from '../interfaces/interfaces';
+import React from 'react';
+import {motion} from 'framer-motion';
 const CodeMirror: any = require('react-codemirror');
 require('codemirror/mode/javascript/javascript');
 // const {hookd} = require('@reactionaries/hookd')
 
+interface PreBoxProps {
+  handleChange: (code: string) => void;
+  code: string;
+}
 
-
-const PreBox: any = ( props: propsInterface ): any => {
-  
+const PreBox: React.FC<PreBoxProps> = ( props): any => {
   const options = {
-    value: "",
+    value: '',
     tabsize: 2,
     mode: "javascript",
     theme: "dracula",
     lineNumbers: true,
   };
-  
-  
-  
-  
-  let text: string = '';
   return (
-    <React.Fragment>
     <div id="preBox">
         <CodeMirror options={options} onChange = {props.handleChange}/>
     </div>
-  </React.Fragment>
   );
 }
 

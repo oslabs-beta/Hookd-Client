@@ -1,18 +1,15 @@
 import React from 'react';
-import { propsInterface } from '../interfaces/interfaces';
 const CodeMirror: any = require('react-codemirror');
 require('codemirror/mode/javascript/javascript');
 
-
-// useEffect(() => {
-//   document.getElementById("outputField").innerHTML = "transformed by the Hookd team"
-// })
-
-
-
-const PostBox = (props: propsInterface) => {
+interface PostBoxProps {
+  transpiledCode: string;
+  error: string | null;
+}
+const PostBox: React.FC<PostBoxProps> = (props) => {
+  const value = props.error ? 'Sorry something went wrong, there might be a syntax error.\nMake sure to provide a Class Component.' : props.transpiledCode;
   const options = {
-    value: "Transformed Code Will Appear here...",
+    value: value,
     tabsize: 2,
     mode: "javascript",
     theme: "dracula",
@@ -20,11 +17,9 @@ const PostBox = (props: propsInterface) => {
   };
 
   return (
-    <React.Fragment>
-      <div id="postBox">
-      <CodeMirror options={options}  />
-      </div>
-    </React.Fragment>
+    <div id="postBox">
+      <CodeMirror options={options}/>
+    </div>
   );
 }
 

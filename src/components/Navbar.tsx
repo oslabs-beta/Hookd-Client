@@ -1,12 +1,16 @@
 import React from 'react';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+
+}
+const Navbar: React.FC<NavbarProps> = () => {
 
   return (
-    <React.Fragment>
-
-
-    </React.Fragment>
+    <div id = 'navbar'>
+      <ul className = 'flex'>
+        <li>The Project</li>
+      </ul>
+    </div>
   );
 }
 
