@@ -62,6 +62,9 @@ code {
 #header h1 {
   font-size: 40px;
 }
+#header p {
+  margin: 7px 0;
+}
 #preBox {
   grid-area: pre;
   height: 500px;
@@ -131,4 +134,13 @@ code {
   display: flex;
   justify-content: space-evenly;
   margin: 20px;
+}
+.github-button-div {
+  align-items: flex-start;
+}
+.github-button-div div {
+  margin: 0 10px;
+}
+.github-button-div div p{
+  margin: 0;
 }
