@@ -15,3 +15,6 @@ https://www.npmjs.com/package/@reactionaries/hookd-cli
 In addittion to the CLI, Hookd is also available as a a module, donload from NPM: @reactionaries/hookd
 https://www.npmjs.com/package/@reactionaries/hookd
 
+Both the module and CLI tool can be viewed on GitHub as well!
+https://github.com/oslabs-beta/Hookd
+
