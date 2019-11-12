@@ -1,11 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
 li {
   list-style: none;
 }
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -60,19 +58,12 @@ code {
   grid-area: header;
   padding: 10px;
   padding-left: 40px;
-  display: grid;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-content: center;
 }
 #header h1 {
-  font-size: 60px;
-  text-align: center;
-
+  font-size: 40px;
 }
 #header p {
   margin: 7px 0;
-  text-align: center;
 }
 #preBox {
   grid-area: pre;
@@ -88,8 +79,7 @@ code {
 #submitButton {
   max-width: 150px;
   max-height: 75px;
-  margin: 0 auto;
-  padding: 5px;
+  margin: 25px; 
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -99,7 +89,7 @@ code {
   font-size: 1.4rem;
   box-shadow: 2px 2px 2px #02bd50;
   background-color: 
-  #00db5a;
+  #00db5a
 }
 #submitButton:hover {
   background-color: 
@@ -109,9 +99,6 @@ code {
 #footer {
   grid-area: footer;
   margin: 0 25px;
-}
-#footer h1 {
-  text-align: center;
 }
 #footer article {
   text-align: center;
@@ -149,8 +136,7 @@ code {
   margin: 20px;
 }
 .github-button-div {
-  /* align-items: flex-start; */
-  justify-content: center;
+  align-items: flex-start;
 }
 .github-button-div div {
   margin: 0 10px;

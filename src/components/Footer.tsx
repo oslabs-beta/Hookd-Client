@@ -7,7 +7,7 @@ export interface FooterProps {
 const Footer : React.FC<FooterProps> = (props) => {
   return (
     <div id="footer">
-      <h1>The Reactionaries</h1>
+      <h1>The REACTionaries</h1>
       <article>
         Hookd is a transpilation and transformation tool to help ease developers into working with hooks in their already existing projects.  As a group of developers that are infatuated with the ease and simplicity of hooks, we would love to make learning and using hooks more accessible to the wider React community.
       </article>
